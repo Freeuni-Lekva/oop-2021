@@ -1,1 +1,21 @@
-theme: jekyll-theme-cayman
+remote_theme: pmarsceill/just-the-docs
+
+title: პროგრამული უზრუნველყოფის ინჟინერია
+description: თბილისის თავისუფალი უნივერსიტეტი, 2020/2021 გაზაფხული
+
+baseurl: /
+url: "https://freeuni-oop.github.io"
+
+exclude: []
+
+heading_anchors: true
+
+aux_links:
+  "GitHub":
+    - "//github.com/Freeuni-Lekva/oop-2021"
+  "Google classroom":
+    - "//classroom.google.com/c/MzA4OTM4NDQ0OTIx"
+
+aux_links_new_tab: true
+
+nav_sort: case_insensitive
