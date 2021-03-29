@@ -1,12 +1,15 @@
 remote_theme: pmarsceill/just-the-docs
 
-title: პროგრამული უზრუნველყოფის ინჟინერია
+title: OOP
 description: თბილისის თავისუფალი უნივერსიტეტი, 2020/2021 გაზაფხული
 
 baseurl: /
 url: "https://freeuni-oop.github.io"
 
-exclude: []
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
 
 heading_anchors: true
 
@@ -19,3 +22,5 @@ aux_links:
 aux_links_new_tab: true
 
 nav_sort: case_insensitive
+
+search_enabled: false
