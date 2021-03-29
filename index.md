@@ -1,7 +1,6 @@
 ---
 nav_order: 1
 title: მთავარი
-has_children: true
 ---
 
 # მთავარი
