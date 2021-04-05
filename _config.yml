@@ -4,7 +4,7 @@ title: OOP
 description: თბილისის თავისუფალი უნივერსიტეტი, 2020/2021 გაზაფხული
 
 baseurl: /
-url: "https://freeuni-oop.github.io"
+url: "https://freeuni-lekva.github.io/"
 
 exclude:
   - .gitignore
