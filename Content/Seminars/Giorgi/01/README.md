@@ -1,4 +1,4 @@
-``` shell
+```shell
 # *.java ფაილის დაკომპილირება და გაშვება
 > java Main.java
 Hello OOP-2021!!
@@ -15,7 +15,7 @@ Hello OOP-2021!!
 
 Java აპლიკაციების/ბიბლიოთეკების დისტრიბუცია ხდება JAR ფაილების გამოყენებით, რომელიც იგივე ZIP არქივია. მასში შეიძლება იყოს META-INF დირექტორია რომელშიც ინახება მეტა ინფორმაცია აპლიკაციის/ბიბლიოთეკის შესახებ.
 
-``` shell
+```shell
 # jar არქივის შექმნა
 > jar cf app.jar Main.java
 > ls
@@ -29,7 +29,7 @@ no main manifest attribute, in app.jar
 ბოლო ბრძანება შეცდომას აბრუნებს რადგან მანიფესტში არ მიგვითითებია მთავარ/საწყისი კლასის სახელი რომელიც უნდა გაეშვას.
 ეს ინფორმაცია უნდა ინახებოდეს არქივში მყოფ META-INF/MANIFEST.MF ფაილში.
 
-``` shell
+```shell
 > mkdir tmp
 > cp app.jar tmp
 > cd tmp
@@ -45,7 +45,7 @@ Manifest-Version: 1.0
 Created-By: 13-ea (Oracle Corporation)
 ```
 
-``` shell
+```shell
 > echo "Manifest-Version: 1.0" > Hello.MF
 > echo "Main-Class: Main" >> Hello.MF
 > cat Hello.MF
@@ -64,7 +64,7 @@ Hello OOP-2021!!
 > java -jar app.jar
 ```
 
-``` shell
+```shell
 > cd hello
 > javac Hello.java
 > cd ../
