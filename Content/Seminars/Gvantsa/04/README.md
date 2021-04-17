@@ -15,7 +15,9 @@ grand_parent: სემინარები
 - დანარჩენ შემთხვევებში დააბრუნოს რიცხვი i სტრიქონის სახით.
 
 [FizzBuzz კლასის კოდი](https://github.com/Freeuni-Lekva/oop-2021/tree/main/Content/Seminars/Gvantsa/04/FizzBuzz.java)
+
 [FizzBuzz კლასის ტესტების კოდი](https://github.com/Freeuni-Lekva/oop-2021/tree/main/Content/Seminars/Gvantsa/04/TestFizzBuzz.java)
 
 შევქმენით ჯენერიქ `Pair` კლასი. რომელსაც დავუწერეთ გეთერ/სეთერ მეთოდები და გადავუტვირთეთ `equals` ფუნქცია.
+
 [Pair კლასის კოდი](https://github.com/Freeuni-Lekva/oop-2021/tree/main/Content/Seminars/Gvantsa/04/Pair.java)
