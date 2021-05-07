@@ -33,3 +33,5 @@ grand_parent: სემინარები
   - ```java
     public int getMood();
     ```
+
+[კოდი](https://github.com/Freeuni-Lekva/oop-2021/tree/main/Content/Seminars/Gvantsa/07)
