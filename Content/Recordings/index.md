@@ -39,3 +39,8 @@ has_children: false
 [ლექცია 10](https://drive.google.com/file/d/1G4IHQYY4GsnurCpOY8lzOnyGBRqhkE8P)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/1UGpF52i87Rfqwz0Bw8cz3IVD1j0oFnKk)  
 [სემინარი - გვანცა](https://drive.google.com/file/d/15sTGprHl9KR8dnsJDr60Hpg7qcOyyiYW/view?usp=sharing)
+
+2021-05-11  
+[ლექცია 11]()  
+[სემინარი - გიორგი]()  
+[სემინარი - გვანცა](https://drive.google.com/file/d/1LloUiil2vZYhFFWhgCR6Mf3sEiI4-Jgp/view?usp=sharing)
