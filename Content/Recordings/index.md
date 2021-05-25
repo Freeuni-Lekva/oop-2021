@@ -41,7 +41,7 @@ has_children: false
 [სემინარი - გვანცა](https://drive.google.com/file/d/15sTGprHl9KR8dnsJDr60Hpg7qcOyyiYW)  
 
 2021-05-11  
-[ლექცია 11](https://drive.google.com/file/d/1DI7G6_jTND5Palo28XqApFiPbg1dpwFU)
+[ლექცია 11](https://drive.google.com/file/d/1DI7G6_jTND5Palo28XqApFiPbg1dpwFU)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/1hfWWmwF5OlMM1PT4WZhkQoTOKYfv_Ymc)  
 [სემინარი - გვანცა](https://drive.google.com/file/d/1LloUiil2vZYhFFWhgCR6Mf3sEiI4-Jgp)  
 
@@ -51,7 +51,7 @@ has_children: false
 [სემინარი - გვანცა]()  
 
 2021-05-18  
-[ლექცია 13](https://drive.google.com/file/d/1RlO2-CIsvP2aNsIBltSxQ8__5MhFWW47)
+[ლექცია 13](https://drive.google.com/file/d/1RlO2-CIsvP2aNsIBltSxQ8__5MhFWW47)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/17KZbGiTltF8Nt78JlmfeIUTA8PqcbuA9)  
 [სემინარი - გვანცა]()  
 
