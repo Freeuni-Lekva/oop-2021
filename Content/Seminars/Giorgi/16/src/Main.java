@@ -39,7 +39,7 @@ class Cell implements Runnable {
                 int k = x + i;
                 int l = y + j;
                 if (0 <= k && k < grid.length && 0 <= l && l < grid[0].length) {
-                    if (grid[x + i][y + j]) {
+                    if (grid[k][l]) {
                         aliveCount++;
                     }
                 }
