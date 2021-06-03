@@ -1,0 +1,16 @@
+p {
+  font-size: 40px;
+}
+
+a {
+  color: green;
+}
+
+.container {
+  width: 80%;
+}
+
+.table,
+#form {
+  width: 100%;
+}
