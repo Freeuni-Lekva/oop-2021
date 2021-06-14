@@ -1,0 +1,29 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Students Webapp</display-name>
+
+  <servlet>
+    <servlet-name>hello-servlet</servlet-name>
+    <servlet-class>ge.edu.freeuni.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>students-servlet</servlet-name>
+    <servlet-class>ge.edu.freeuni.StudentsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>hello-servlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>students-servlet</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+
+  <listener>
+    <listener-class>ge.edu.freeuni.StudentsContextListener</listener-class>
+  </listener>
+</web-app>

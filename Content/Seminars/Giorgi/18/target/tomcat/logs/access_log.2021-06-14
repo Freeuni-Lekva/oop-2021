@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:48:41 +0400] "GET /students HTTP/1.1" 500 1436 http-bio-8080-exec-1 49
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:48:41 +0400] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-2 1
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:49:12 +0400] "GET /students HTTP/1.1" 500 1436 http-bio-8080-exec-3 3
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:51:44 +0400] "GET /students HTTP/1.1" 200 3326 http-bio-8080-exec-1 1096
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:51:58 +0400] "GET /students?first_name=foo&last_name=&enrollment_year= HTTP/1.1" 200 3326 http-bio-8080-exec-3 26
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:52:49 +0400] "GET /students?first_name=foo&last_name=&enrollment_year= HTTP/1.1" 200 3326 http-bio-8080-exec-1 519
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:58:46 +0400] "GET /students?first_name=foo&last_name=&enrollment_year= HTTP/1.1" 200 1604 http-bio-8080-exec-1 363
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:58:49 +0400] "GET /students?first_name=&last_name=bar&enrollment_year= HTTP/1.1" 200 1604 http-bio-8080-exec-3 26
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:21:58:52 +0400] "GET /students?first_name=&last_name=&enrollment_year=123 HTTP/1.1" 200 2467 http-bio-8080-exec-4 25
+0:0:0:0:0:0:0:1 - - [14/Jun/2021:22:00:20 +0400] "GET /students?first_name=&last_name=&enrollment_year= HTTP/1.1" 200 3326 http-bio-8080-exec-1 415
