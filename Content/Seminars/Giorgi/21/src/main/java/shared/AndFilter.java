@@ -10,8 +10,9 @@ public class AndFilter implements Filter {
         filters = new ArrayList<>();
     }
 
-    public void add(Filter f) {
+    public AndFilter add(Filter f) {
         filters.add(f);
+        return this;
     }
 
     public int size() {

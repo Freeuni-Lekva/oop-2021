@@ -34,15 +34,10 @@ public class EchoServer {
     private void handleClient(Socket client) {
         new Thread(() -> {
             try {
-                client.getInputStream();
                 ObjectInputStream inp = new ObjectInputStream(client.getInputStream());
                 ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
                 while (true) {
                     Command cmd = (Command) inp.readObject();
-                    System.out.println(cmd);
-                    if (cmd == null) {
-                        continue;
-                    }
                     switch (cmd) {
                         case EXIT:
                             inp.close();
