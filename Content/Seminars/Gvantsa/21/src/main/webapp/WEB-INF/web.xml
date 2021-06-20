@@ -1,0 +1,24 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>hello-servlet</servlet-name>
+    <servlet-class>ge.edu.freeuni.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>students-servlet</servlet-name>
+    <servlet-class>ge.edu.freeuni.StudentsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>hello-servlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>students-servlet</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+
+  <listener>
+    <listener-class>ge.edu.freeuni.StudentsContextListener</listener-class>
+  </listener>
+</web-app>
