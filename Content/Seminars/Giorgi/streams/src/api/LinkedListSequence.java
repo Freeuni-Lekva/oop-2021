@@ -1,6 +1,6 @@
 package api;
 
-public class LinkedList<T> extends Sequence<T> {
+public class LinkedListSequence<T> extends Sequence<T> {
     private Node head;
     private Node tail;
 
@@ -34,7 +34,7 @@ public class LinkedList<T> extends Sequence<T> {
         }
     }
 
-    public LinkedList() {
+    public LinkedListSequence() {
         head = null;
         tail = null;
     }

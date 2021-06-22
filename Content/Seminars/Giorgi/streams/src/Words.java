@@ -1,5 +1,5 @@
 import api.ArraySequence;
-import api.LinkedList;
+import api.LinkedListSequence;
 import api.Sequence;
 import api.lazy.LazyWrapperSequence;
 
@@ -11,14 +11,14 @@ public class Words {
         Sequence<File> dirs = all.filter(File::isDirectory);
         Sequence<Sequence<File>> subdirs = dirs.map(Words::listFiles);
         Sequence<File> subdirFiles = Sequence.flatten(subdirs);
-        return Sequence.flatten(subdirFiles, all.filter(f -> !f.isDirectory()));
+        return Sequence.flatten(subdirFiles, all.filter(File::isFile));
     }
 
     public static void main(String[] args) {
         File root = new File("/Users/lekva/teach/freeuni/oop/oop-2021/Content/Seminars");
         Sequence<File> javaFiles = listFiles(root).filter(f -> f.getName().endsWith(".java"));
         Sequence<String> lines = Sequence.flatten(javaFiles.map(f -> {
-            LinkedList<String> ret = new LinkedList<>();
+            LinkedListSequence<String> ret = new LinkedListSequence<>();
             try {
                 BufferedReader r = new BufferedReader(new FileReader(f));
                 String line;

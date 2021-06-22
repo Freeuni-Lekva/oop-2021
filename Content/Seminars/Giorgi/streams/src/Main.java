@@ -1,9 +1,9 @@
-import api.LinkedList;
+import api.LinkedListSequence;
 import api.Sequence;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList<Integer> l = new LinkedList<>();
+        LinkedListSequence<Integer> l = new LinkedListSequence<>();
         l.add(1);
         l.add(2);
         l.add(3);
