@@ -30,34 +30,13 @@ public abstract class Sequence<T> implements Iterable<T> {
     }
 
     public static <T> Sequence<T> flatten(Sequence<Sequence<T>> sequences) {
-        LinkedListSequence<T> ret = new LinkedListSequence<>();
-        for (Sequence<T> seq : sequences) {
-            for (T elem : seq) {
-                ret.add(elem);
-            }
-        }
-        return ret;
-//        LinkedListSequence<T> ret = sequences.reduce(new Reducer<Sequence<T>, LinkedListSequence<T>>() {
-//                                                         @Override
-//                                                         public LinkedListSequence<T> reduce(Sequence<T> seq, LinkedListSequence<T> init) {
-//                                                             seq.reduce(new Reducer<T, LinkedListSequence<T>>() {
-//                                                                 @Override
-//                                                                 public LinkedListSequence<T> reduce(T elem, LinkedListSequence<T> init) {
-//                                                                     init.add(elem);
-//                                                                     return init;
-//                                                                 }
-//                                                             });
-//                                                             return null;
-//                                                         }
-//                                                     }, new LinkedListSequence<T>());
-//        LinkedListSequence<T> ret = sequences.reduce((seq, a) -> {
-//            seq.reduce((x, b) -> {
-//                b.add(x);
-//                return b;
-//            }, a);
-//            return a;
-//        }, new LinkedListSequence<T>());
-        // return ret;
+        return sequences.reduce((curSeq, res) -> {
+            curSeq.reduce((elem, res_) -> {
+                res_.add(elem);
+                return res_;
+            }, res);
+            return res;
+        }, new LinkedListSequence<>());
     }
 
     public static <T> Sequence<T> flatten(Sequence<T>... sequences) {
