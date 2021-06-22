@@ -21,8 +21,8 @@ public abstract class Sequence<T> implements Iterable<T> {
         return ret;
     }
 
-    public T reduce(Reducer<T> reducer, T init) {
-        T ret = init;
+    public <O> O reduce(Reducer<T, O> reducer, O init) {
+        O ret = init;
         for (T elem : this) {
             ret = reducer.reduce(elem, ret);
         }

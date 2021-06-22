@@ -19,7 +19,7 @@ public abstract class LazySequence<T> extends Sequence<T> {
     }
 
     @Override
-    public T reduce(Reducer<T> reducer, T init) {
-        return this.reduce(reducer, init);
+    public <O> O reduce(Reducer<T, O> reducer, O init) {
+        return super.reduce(reducer, init);
     }
 }
