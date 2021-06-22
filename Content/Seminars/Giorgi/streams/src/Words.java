@@ -1,12 +1,13 @@
 import api.ArraySequence;
 import api.LinkedList;
 import api.Sequence;
+import api.lazy.LazyWrapperSequence;
 
 import java.io.*;
 
 public class Words {
     public static Sequence<File> listFiles(File dir) {
-        Sequence<File> all = new ArraySequence<>(dir.listFiles());
+        Sequence<File> all = new LazyWrapperSequence<>(new ArraySequence<>(dir.listFiles()));
         Sequence<File> dirs = all.filter(File::isDirectory);
         Sequence<Sequence<File>> subdirs = dirs.map(Words::listFiles);
         Sequence<File> subdirFiles = Sequence.flatten(subdirs);
@@ -33,7 +34,11 @@ public class Words {
             }
             return ret;
         }));
-        Sequence<String> words = Sequence.flatten(lines.map(l -> new ArraySequence<>(l.split("\\s+"))));
+        Sequence<String> words = Sequence.flatten(
+                lines.map(l -> {
+                    return new LazyWrapperSequence<>(new ArraySequence<>(l.split("\\W+")))
+                            .filter(w -> !w.isEmpty());
+                }));
         for (String w : words) {
             System.out.println(w);
         }
