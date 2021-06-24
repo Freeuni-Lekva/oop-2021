@@ -1,5 +1,5 @@
 package api;
 
-public interface Reducer<T> {
-    public T reduce(T elem, T init);
+public interface Reducer<T, O> {
+    public O reduce(T elem, O init);
 }
