@@ -71,22 +71,21 @@ has_children: false
 [სემინარი - გვანცა](https://drive.google.com/file/d/14p9VyTFjWNTYRUIO70wnnE2ie4ntDCEN)  
 
 2021-06-01
-[ლექცია 16](https://drive.google.com/file/d/1PeTSh2WFzWYdt6oP3wwXTkg8X6yYRkqD)  
+[ლექცია 17](https://drive.google.com/file/d/1PeTSh2WFzWYdt6oP3wwXTkg8X6yYRkqD)  
 [სემინარი - გიორგი]()  
 [სემინარი - გვანცა]()  
 
 2021-06-08
-[ლექცია 16](https://drive.google.com/file/d/1LN-xf576FFGH98uJGiPmnRaLj_R2eRyK)  
+[ლექცია 19](https://drive.google.com/file/d/1LN-xf576FFGH98uJGiPmnRaLj_R2eRyK)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/10-gK8OvaJd2iZvraYYte-LHcFDCrWNBq)  
 [სემინარი - გვანცა]()  
 
 2021-06-15
-[ლექცია 16](https://drive.google.com/file/d/18oPfQZMMvSJ3mNJ8CUU2k1wON6JUhEkT)  
+[ლექცია 21](https://drive.google.com/file/d/18oPfQZMMvSJ3mNJ8CUU2k1wON6JUhEkT)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/1Dm8gkV4Uv7BVHWFAaj57UbYDaKq_ZM8d)  
 [სემინარი - გვანცა]()  
 
 2021-06-22
-[ლექცია 16](https://drive.google.com/file/d/121TOws1fewcfAgP8iFVNp7f9xCTIeKlk)  
+[ლექცია 23](https://drive.google.com/file/d/121TOws1fewcfAgP8iFVNp7f9xCTIeKlk)  
 [სემინარი - გიორგი](https://drive.google.com/file/d/1A2QCuhFyxOga35X2XY0_RKN3bD4MvFyY)  
 [სემინარი - გვანცა]()  
-
