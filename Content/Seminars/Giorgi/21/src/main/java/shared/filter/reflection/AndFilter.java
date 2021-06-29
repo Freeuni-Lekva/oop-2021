@@ -1,4 +1,4 @@
-package shared;
+package shared.filter.reflection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,26 +20,12 @@ public class AndFilter implements Filter {
     }
 
     @Override
-    public boolean filter(Student st) {
+    public Boolean evaluate(Object o) {
         for (Filter f : filters) {
-            if (!f.filter(st)) {
+            if (!f.evaluate(o)) {
                 return false;
             }
         }
         return true;
-    }
-
-    @Override
-    public String format() {
-        StringBuilder ret = new StringBuilder();
-        for (int i = 0; i < filters.size(); i++) {
-            if (i > 0) {
-                ret.append(" AND ");
-            }
-            ret.append('(');
-            ret.append(filters.get(i).format());
-            ret.append(')');
-        }
-        return ret.toString();
     }
 }

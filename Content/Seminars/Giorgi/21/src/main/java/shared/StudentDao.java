@@ -1,12 +1,19 @@
 package shared;
 
+import rpc.RPCMethod;
+import shared.filter.descriptor.ExpressionDescription;
+
 import java.util.List;
 
 public interface StudentDao {
-    public void add(Student st);
-    public void remove(Student st);
+    @RPCMethod
+    public Integer add(Student st);
+    @RPCMethod
+    public Void remove(Student st);
+    @RPCMethod
     public Student get(int id);
-    public List<Student> filter(Filter f);
-
+    @RPCMethod
+    public List<Student> filter(ExpressionDescription ed);
+    @RPCMethod
     public List<Student> getAll();
 }

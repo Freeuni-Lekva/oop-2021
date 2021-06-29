@@ -6,8 +6,11 @@ public class Student implements Serializable {
     public final static int NO_ID = -1;
 
     private int id;
+    @SqlColumnName(name = "first_name")
     private String firstName;
+    @SqlColumnName(name = "last_name")
     private String lastName;
+    @SqlColumnName(name = "enrollment_year")
     private int enrollmentYear;
 
     public Student(int id, String firstName, String lastName, int enrollmentYear) {

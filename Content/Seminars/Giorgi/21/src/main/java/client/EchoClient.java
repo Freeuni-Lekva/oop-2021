@@ -1,14 +1,15 @@
 package client;
 
 import shared.Command;
-import shared.Filter;
 import shared.Student;
+import shared.StudentDao;
+import shared.filter.descriptor.ExpressionDescription;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.List;
 
-public class EchoClient {
+public class EchoClient implements StudentDao {
     private String address;
     private int port;
     private Socket server;
@@ -27,37 +28,77 @@ public class EchoClient {
     }
 
     public void disconnect() throws IOException {
-        out.writeObject(Command.EXIT);
+        // out.writeObject(Command.EXIT);
         inp.close();
         out.close();
         server.close();
     }
 
-    public String echo(String msg) throws IOException, ClassNotFoundException {
-        out.writeObject(Command.ECHO);
-        out.writeObject(msg);
-        out.flush();
-        return (String) inp.readObject();
+//    public String echo(String msg) throws IOException, ClassNotFoundException {
+//        out.writeObject(Command.ECHO);
+//        out.writeObject(msg);
+//        out.flush();
+//        return (String) inp.readObject();
+//    }
+
+    public Integer add(Student st) {
+        try {
+            out.writeObject("add");
+            out.writeObject(st);
+            out.flush();
+            return (Integer) inp.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
-    public int createStudent(Student st) throws IOException {
-        out.writeObject(Command.CREATE);
-        out.writeObject(st);
-        out.flush();
-        return inp.readInt();
+    public Student get(int id) {
+        try {
+            out.writeObject("get");
+            out.writeObject(id);
+            out.flush();
+            return (Student) inp.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
-    public Student getStudent(int id) throws IOException, ClassNotFoundException {
-        out.writeObject(Command.GET);
-        out.writeInt(id);
-        out.flush();
-        return (Student) inp.readObject();
+    public List<Student> filter(ExpressionDescription ed) {
+        try {
+            out.writeObject("filter");
+            out.writeObject(ed);
+            out.flush();
+            return (List<Student>) inp.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
-    public List<Student> filterStudents(Filter f) throws IOException, ClassNotFoundException {
-        out.writeObject(Command.FILTER);
-        out.writeObject(f);
-        out.flush();
-        return (List<Student>) inp.readObject();
+    @Override
+    public Void remove(Student st) {
+        try {
+            out.writeObject("remove");
+            out.writeObject(st);
+            out.flush();
+            return (Void) inp.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Student> getAll() {
+        try {
+            out.writeObject("getAll");
+            out.flush();
+            return (List<Student>) inp.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
