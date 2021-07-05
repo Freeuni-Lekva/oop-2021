@@ -1,43 +1,24 @@
-package ge.edu.freeuni;
+package ge.edu.freeuni.api;
 
-import com.sun.net.httpserver.HttpContext;
+import ge.edu.freeuni.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Enumeration;
 
 
 public class StudentsServlet extends HttpServlet {
-    private final String WHOAMI = "whoami";
-//    private StudentDao students;
-//
-//    @Override
-//    public void init() throws ServletException {
-//        super.init();
-//        students = new ArrayListStudentDao();
-//    }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cookie[] cookies = req.getCookies();
-        String me = null;
-        if (cookies != null) {
-            for (Cookie c : cookies) {
-                if (c.getName().equals(WHOAMI)) {
-                    me = c.getValue();
-                }
-            }
-        }
-        if (me != null) {
-            // req.setAttribute(WHOAMI, me);
-        }
         Filter f = buildFilter(req);
         StudentDao students = getStore(req);
         req.setAttribute("students", students.filter(f));
-        req.getRequestDispatcher("WEB-INF/students_view.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/api/students.jsp").forward(req, resp);
     }
 
     @Override
@@ -48,8 +29,6 @@ public class StudentsServlet extends HttpServlet {
                 req.getParameter("last_name"),
                 Integer.valueOf(req.getParameter("enrollment_year")));
         students.add(st);
-        resp.addCookie(new Cookie(WHOAMI, st.getFirstName()));
-        resp.sendRedirect("/students");
     }
 
     private StudentDao getStore(HttpServletRequest req) {

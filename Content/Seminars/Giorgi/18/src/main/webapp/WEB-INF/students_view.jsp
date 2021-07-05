@@ -9,13 +9,14 @@
         <meta charset='utf-8' />
         </head>
         <body>
+        <script type="application/javascript" src="/static/main.js"></script>
         <div>
         <c:choose>
             <c:when test="${whoami != null}">
                 Hello <%= request.getAttribute("whoami") %>
             </c:when>
             <c:otherwise>
-                <form action='/students' method='post'>
+                <form action='/students' method='post' onsubmit="return create();" id="create">
                     <input type='text' placeholder='First Name' name='first_name' />
                     <input type='text' placeholder='Last Name' name='last_name' />
                     <input type='text' placeholder='Year' name='enrollment_year' />
@@ -23,20 +24,20 @@
                 </form>
             </c:otherwise>
          </c:choose>
-        <form action='/students' method='get'>
+        <form action='/students' method='get' onsubmit="return filter();" id="filter">
             <input type='text' placeholder='First Name' name='first_name' />
             <input type='text' placeholder='Last Name' name='last_name' />
             <input type='text' placeholder='Year' name='enrollment_year' />
             <input type='submit' value='Search' />
         </form>
-        <table class='table' id='student - table'>
+        <table class='table' id="students">
         <tr>
         <th>First name</th>
         <th>Last name</th>
         <th>Year</th>
         </tr>
         <c:forEach var="st" items="${students}">
-            <tr>
+            <tr class="student">
             <td><c:out value="${st.firstName}" /></td>
             <td><c:out value="${st.lastName}" /></td>
             <td><c:out value="${st.enrollmentYear}" /></td>
