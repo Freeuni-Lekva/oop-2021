@@ -24,10 +24,10 @@
                 </form>
             </c:otherwise>
          </c:choose>
-        <form action='/students' method='get' onsubmit="return filter();" id="filter">
-            <input type='text' placeholder='First Name' name='first_name' />
-            <input type='text' placeholder='Last Name' name='last_name' />
-            <input type='text' placeholder='Year' name='enrollment_year' />
+        <form action='/students' method='get' onsubmit="return filterUsingWS();" id="filter">
+            <input type='text' placeholder='First Name' name='first_name' id='filter_first_name' />
+            <input type='text' placeholder='Last Name' name='last_name' id='filter_last_name' />
+            <input type='text' placeholder='Year' name='enrollment_year' id='filter_enrollment_year' />
             <input type='submit' value='Search' />
         </form>
         <table class='table' id="students">

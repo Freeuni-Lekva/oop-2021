@@ -1,11 +1,16 @@
 package ge.edu.freeuni;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Student {
     public final static int NO_ID = -1;
 
     private int id;
+    @JsonProperty("first_name")
     private String firstName;
+    @JsonProperty("last_name")
     private String lastName;
+    @JsonProperty("enrollment_year")
     private int enrollmentYear;
 
     public Student(int id, String firstName, String lastName, int enrollmentYear) {

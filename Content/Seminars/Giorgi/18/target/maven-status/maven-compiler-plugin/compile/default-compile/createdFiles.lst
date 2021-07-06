@@ -1,8 +1,10 @@
 ge/edu/freeuni/LastNameFilter.class
+ge/edu/freeuni/api/StudentsWebSocket$1.class
 ge/edu/freeuni/AllFilter.class
 ge/edu/freeuni/StudentsContextListener.class
 ge/edu/freeuni/Filter.class
 ge/edu/freeuni/Student.class
+ge/edu/freeuni/api/StudentsWebSocket.class
 ge/edu/freeuni/api/StudentsServlet.class
 ge/edu/freeuni/HelloServlet.class
 ge/edu/freeuni/FirstNameFilter.class
